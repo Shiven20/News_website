@@ -1,3 +1,5 @@
+// const { Pagination } = require("swiper/modules");
+
 // Grab elements
 const selectElement= selector =>{
     const element=document.querySelector(selector)
@@ -56,3 +58,23 @@ themeToggleBtn.addEventListener('click',()=>{
     }
 })
 // Swiper
+const swiper=new Swiper('.swiper',{
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+        nextE1: '.swiper-button-next',
+        prevE1: '.swiper-button-prev'
+    },
+    pagination:{
+        el:'.swiper-pagination'
+    },
+    breakpoints:{
+        700:{
+            slidesPerView: 2,
+        },
+        1200:{
+            slidesPerView: 3,
+        }
+
+    }
+})
